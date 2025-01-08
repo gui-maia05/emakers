@@ -5,6 +5,7 @@ import com.br.emakers.api_emakers.data.entity.Livro;
 import java.util.Date;
 
 public record LivroResponseDTO(
+
         Long IdLivro,
 
         String nome,

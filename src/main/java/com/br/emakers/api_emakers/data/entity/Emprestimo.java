@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @Getter
 @Setter
 @Entity
@@ -24,4 +26,10 @@ public class Emprestimo {
     @ManyToOne
     @JoinColumn(name = "id_livro", nullable = false)
     private Livro livro;
+
+    @Column(name = "data_emprestimo", nullable = false)
+    private LocalDate dataEmprestimo;
+
+    @Column(name = "data_devolucao", nullable = false)
+    private LocalDate dataDevolucao;
 }
